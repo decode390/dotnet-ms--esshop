@@ -20,6 +20,4 @@ WORKDIR /App
 COPY --from=build /App/out .
 COPY --from=build /App/certs/https.pfx /https.pfx
 
-ENV ASPNETCORE_URLS=http://+:8080;https://+:8081
-
 ENTRYPOINT ["dotnet", "Catalog.API.dll"]

@@ -1,0 +1,13 @@
+services:
+  catalog-api:
+    build: .
+    environment:
+      - ASPNETCORE_EVIRONMENT=Development
+      - ASPNETCORE_HTTP_PORT=8080
+      - ASPNETCORE_HTTP_PORTS=8081
+    ports:
+      - 8080
+      - 8081
+    volumes:
+      - ${APPDATA}/Microsoft/UserSecrets:/home/app/.microsoft/usersecrets:ro
+    
