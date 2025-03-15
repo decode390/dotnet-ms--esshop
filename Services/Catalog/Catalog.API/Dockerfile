@@ -18,6 +18,6 @@ FROM mcr.microsoft.com/dotnet/aspnet:9.0@sha256:b4bea3a52a0a77317fa93c5bbdb07662
 WORKDIR /App
 
 COPY --from=build /App/out .
-COPY --from=build /App/certs/https.pfx /https.pfx
+# COPY --from=build /App/certs/https.pfx /https.pfx
 
 ENTRYPOINT ["dotnet", "Catalog.API.dll"]
